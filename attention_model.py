@@ -148,25 +148,3 @@ class DecoderRNN(nn.Module):
             
         sampled_ids = torch.cat(sampled_ids, 1)
         return sampled_ids.squeeze(), alphas
-
-#vis_dim = 512
-#vis_num = 196
-#embed_dim = 512
-#hidden_dim = 512
-#vocab_size = 1000
-#num_layers = 1
-#dropout_ratio = 0.5
-#model = DecoderRNN(vis_dim, vis_num, embed_dim, hidden_dim, vocab_size, num_layers)
-#
-#n_sample = 10
-#features = to_var(torch.randn(n_sample, vis_num, vis_dim))
-#caption = to_var(torch.zeros(n_sample, 20).long())
-#lengths = [1, 2, 3, 2, 3, 2, 3, 20, 6, 4]
-#
-##model.train()
-##model.cuda()
-#predicts = model(features, caption, lengths)
-#print(predicts.shape)
-#
-##for name, param in model.named_parameters():
-##    print (name, param.size())
