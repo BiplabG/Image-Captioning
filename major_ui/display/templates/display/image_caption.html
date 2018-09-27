@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>Image with the caption</title>
+    </head>
+    <body>
+        {% load static %}
+        <h1>Generated Caption</h1>
+        <img src='{{image.url}}' height='200' width = '350'>
+        <p>{{image_caption}}</p>
+    </body>
+</html>

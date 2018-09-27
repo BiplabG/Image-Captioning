@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Visual Assistance Using Image Captioning</title>
+    </head>
+    <body>
+        <h1>Project visual assistance using Image Captioning</h1>
+        <form action="{% url 'index'%}" method = "POST" action='' enctype='multipart/form-data'>
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
